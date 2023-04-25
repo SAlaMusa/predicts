@@ -21,29 +21,18 @@ def app():
 
     # Add a description
     st.write('This app predicts the likelihood of heart disease based on various health factors.')
-    st.write('''1. (age)
-2. (sex)
-3. (cp) - chest pain type
--- Value 1: typical angina
--- Value 2: atypical angina
--- Value 3: non-anginal pain
--- Value 4: asymptomatic
-4. (trestbps) -  resting blood pressure (in mm Hg on admission to the hospital)
-5.  (chol) - serum cholestoral in mg/dl
-6. (fbs) - (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)
-7. (restecg) - resting electrocardiographic results
+    st.write('''Includes age, sex, cp - chest pain type (Value 1: typical angina, Value 2: atypical angina, Value 3: non-anginal pain, Value 4: asymptomatic ),trestbps -  resting blood pressure (in mm Hg on admission to the hospital),
+ (chol) - serum cholestoral in mg/dl,
+(fbs) - (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false), restecg - resting electrocardiographic results
 -- Value 0: normal
 -- Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)
--- Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria
-8. (thalach) -  maximum heart rate achieved
-9. (exang) - exercise induced angina (1 = yes; 0 = no)
-10. (oldpeak) - ST depression induced by exercise relative to rest
-11. (slope) - the slope of the peak exercise ST segment
+-- Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteriat,
+ (thalach) -  maximum heart rate achieved,
+(exang) - exercise induced angina (1 = yes; 0 = no),
+(oldpeak) - ST depression induced by exercise relative to rest, (slope) - the slope of the peak exercise ST segment
 -- Value 1: upsloping
 -- Value 2: flat
--- Value 3: downsloping
-12. (ca) - number of major vessels (0-3) colored by flourosopy
-13. (thal) - thalassemia Value 
+-- Value 3: downsloping, (ca) - number of major vessels (0-3) colored by flourosopy, and (thal) - thalassemia Value 
 Value 3: fixed defect (no blood flow in some part of the heart)
 Value 6: normal blood flow
 Value 7: reversible defect (a blood flow is observed but it is not normal)''')
