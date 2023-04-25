@@ -79,13 +79,13 @@ Value 7: reversible defect (a blood flow is observed but it is not normal)''')
         'ca': [ca],
         'thal': [thal]
     })
-    st.button('Predict')
+    
     prediction = model.predict(input_data)[0]
     # st.write('## Prediction')
-    
-    if prediction == 0:
+    if st.button('Predict'):
+     if prediction == 0:
       st.write('Based on the input data, you are not likely to have heart disease.')
-    else:
+     else:
       st.write('Based on the input data, you are likely to have heart disease.')
 
 # Run the app
