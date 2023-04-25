@@ -29,6 +29,9 @@ Sarah Sunday Moses
 Millicent Malinga
 David Ntutu Sekonyela
 
-## Demo Video 
+## Demo Video (deployed model)
 
 ## Integration with the app
+Git repo: 
+
+### App Demo
