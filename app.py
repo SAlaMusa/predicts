@@ -26,11 +26,11 @@ except:
 # Define the app
 def app():
     # Set the app title
-    st.title('Heart Disease Prediction')
+    st.title('## Heart Disease Prediction')
 
     # Add a description
-    st.write('This app predicts the likelihood of heart disease based on various health factors.')
-    st.write('''Includes age, sex, cp - chest pain type ,resting blood pressure, serum cholestoral in mg/dl,
+    st.write('### This app predicts the likelihood of heart disease based on various health factors.')
+    st.write('''##### Includes age, sex, cp - chest pain type ,resting blood pressure, serum cholestoral in mg/dl,
 (fbs) - (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false), resting electrocardiographic results, maximum heart rate achieved,
 exercise induced angina (1 = yes; 0 = no),(oldpeak) - ST depression induced by exercise relative to rest, (slope) - the slope of the peak exercise ST segment
 , (ca) - number of major vessels (0-3) colored by flourosopy, and (thal) - thalassemia Value 
