@@ -30,21 +30,11 @@ def app():
 
     # Add a description
     st.write('This app predicts the likelihood of heart disease based on various health factors.')
-    st.write('''Includes age, sex, cp - chest pain type (Value 1: typical angina, Value 2: atypical angina, Value 3: non-anginal pain, Value 4: asymptomatic ),trestbps -  resting blood pressure (in mm Hg on admission to the hospital),
- (chol) - serum cholestoral in mg/dl,
-(fbs) - (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false), restecg - resting electrocardiographic results
--- Value 0: normal
--- Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)
--- Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteriat,
- (thalach) -  maximum heart rate achieved,
-(exang) - exercise induced angina (1 = yes; 0 = no),
-(oldpeak) - ST depression induced by exercise relative to rest, (slope) - the slope of the peak exercise ST segment
--- Value 1: upsloping
--- Value 2: flat
--- Value 3: downsloping, (ca) - number of major vessels (0-3) colored by flourosopy, and (thal) - thalassemia Value 
-Value 3: fixed defect (no blood flow in some part of the heart)
-Value 6: normal blood flow
-Value 7: reversible defect (a blood flow is observed but it is not normal)''')
+    st.write('''Includes age, sex, cp - chest pain type ,resting blood pressure, serum cholestoral in mg/dl,
+(fbs) - (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false), resting electrocardiographic results, maximum heart rate achieved,
+exercise induced angina (1 = yes; 0 = no),(oldpeak) - ST depression induced by exercise relative to rest, (slope) - the slope of the peak exercise ST segment
+, (ca) - number of major vessels (0-3) colored by flourosopy, and (thal) - thalassemia Value 
+''')
 
     # Show the dataset
     # st.write('## Heart Disease Dataset')
@@ -63,19 +53,44 @@ Value 7: reversible defect (a blood flow is observed but it is not normal)''')
     st.write('## Enter Patient Data')
     
     age = st.number_input('Age. Enter age between 1 and 120', min_value=1, max_value=120)
+    st.write('\n\n')
+
     sex = st.selectbox('Sex', options=['Male', 'Female'])
+    st.write('\n\n')
+
     cp = st.selectbox('Chest Pain Type. 1 for typical angina\n 2 for atypical angina\n 3 for non-anginal pain\n 4 for asymptomatic', options=[1, 2, 3, 4])
+    st.write('\n\n')
+
     trestbps = st.number_input('Resting Blood Pressure\n Min = 0, Max value = 300', min_value=0, max_value=300)
+    st.write('\n\n')
+
     chol = st.number_input('Serum Cholesterol.\n MIn = 0, Max= 600', min_value=0, max_value=600)
+    st.write('\n\n')
+
     fbs = st.selectbox('Is your Fasting Blood Sugar greater than 120mg/dl\n 0 =false, 1=True', options=[0, 1])
+    st.write('\n\n')
+
     restecg = st.selectbox('Resting Electrocardiographic Results\n 0 = normal, 1 = having ST-T wave abnomality, 2 = probable or definite hypertrophy(Estes criteria)', options=[0, 1, 2])
+    st.write('\n\n')
+
     thalach = st.number_input('Maximum Heart Rate Achieved (0 - 300)', min_value=0, max_value=300)
+    st.write('\n\n')
+
     exang = st.selectbox('Exercise Induced Angina\n 0 = no, 1=yes, ', options=[0, 1])
+    st.write('\n\n')
+
     oldpeak = st.number_input('ST Depression Induced by Exercise (range 0.0 - 10.0)', min_value=0.0, max_value=10.0)
+    st.write('\n\n')
+
     slope = st.selectbox('Slope of the Peak Exercise ST Segment\n 1= upsloping, 2=flat, 3=downsloping', options=[1, 2, 3])
+    st.write('\n\n')
+
     ca = st.selectbox('Number of Major Vessels Colored by Fluoroscopy\n ', options=[0, 1, 2, 3])
+    st.write('\n\n')
+
     thal = st.selectbox('Thalassemia Value\n 3 = fixed defect(blood not flowing in some parts of heart. ), 6= normal blood flow, 7 = revesible defect', options=[3, 6, 7])
-    
+    st.write('\n\n')
+
     if st.button('Predict'):
         if not age or not trestbps or not chol or not thalach or not oldpeak:
             st.write('Please fill in all the required fields.')
