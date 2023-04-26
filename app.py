@@ -26,10 +26,10 @@ except:
 # Define the app
 def app():
     # Set the app title
-    st.title(' Heart Disease Prediction')
+    st.title(' Heart Attack Risk Prediction')
 
     # Add a description
-    st.write('### This app predicts the likelihood of heart disease based on various health factors.')
+    st.write('### This app predicts the likelihood of heart attack based on various health factors.')
     st.write('''Includes age, sex, cp - chest pain type ,resting blood pressure, serum cholestoral in mg/dl,
 (fbs) - (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false), resting electrocardiographic results, maximum heart rate achieved,
 exercise induced angina (1 = yes; 0 = no),(oldpeak) - ST depression induced by exercise relative to rest, (slope) - the slope of the peak exercise ST segment
@@ -116,9 +116,9 @@ exercise induced angina (1 = yes; 0 = no),(oldpeak) - ST depression induced by e
             prediction = model.predict(input_data)[0]
             # st.write('## Prediction')
             if prediction == 0:
-                st.write('Based on the input data, you are not likely to have heart disease.')
+                st.write('Based on the input data, you are not at risk of heart attack.')
             else:
-                st.write('Based on the input data, you are likely to have heart disease.')
+                st.write('Based on the input data, you are likely to have heart attack.')
 
 # Run the app
 if __name__ == '__main__':
