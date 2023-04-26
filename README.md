@@ -30,8 +30,5 @@ Millicent Malinga
 David Ntutu Sekonyela
 
 ## Demo Video (deployed model)
+https://www.loom.com/share/c780f1d09fc44b90a049175f8cf7a467
 
-## Integration with the app
-Git repo: 
-
-### App Demo
