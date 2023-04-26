@@ -115,11 +115,10 @@ exercise induced angina (1 = yes; 0 = no),(oldpeak) - ST depression induced by e
             
             prediction = model.predict(input_data)[0]
             # st.write('## Prediction')
-            if st.button('Predict'):
-                if prediction == 0:
-                   st.write('Based on the input data, you are not likely to have heart disease.')
-                else:
-                   st.write('Based on the input data, you are likely to have heart disease.')
+            if prediction == 0:
+                st.write('Based on the input data, you are not likely to have heart disease.')
+            else:
+                st.write('Based on the input data, you are likely to have heart disease.')
 
 # Run the app
 if __name__ == '__main__':
